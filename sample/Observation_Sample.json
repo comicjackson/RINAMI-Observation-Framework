@@ -1,0 +1,118 @@
+{
+  "metadata": {
+    "observation_id": "OBS-0001",
+    "version": "0.1.0",
+    "framework": "RINAMI Observation Framework",
+    "created_at": "2026-07-16T12:35:00+09:00",
+    "language": "en",
+    "status": "sample"
+  },
+
+  "environment": {
+    "location": "Restaurant",
+    "weather": null,
+    "time_period": "Lunch",
+    "atmosphere": "Quiet",
+    "customer_volume": "Moderate"
+  },
+
+  "participants": [
+    {
+      "id": "P001",
+      "role": "Customer",
+      "group_size": 1
+    },
+    {
+      "id": "P002",
+      "role": "Staff"
+    }
+  ],
+
+  "observation": {
+    "facts": [
+      "Customer entered alone.",
+      "Customer looked around before selecting a seat.",
+      "Customer chose a window seat.",
+      "Customer ordered a standard lunch.",
+      "Customer used a smartphone while waiting.",
+      "Customer remained seated after finishing the meal.",
+      "Customer completed payment and left quietly."
+    ]
+  },
+
+  "structure": {
+    "patterns": [
+      {
+        "name": "Seat Preference",
+        "description": "Preference for window seating."
+      },
+      {
+        "name": "Waiting Behavior",
+        "description": "Smartphone usage during waiting."
+      },
+      {
+        "name": "Post-Meal Behavior",
+        "description": "Remaining seated after eating."
+      }
+    ],
+
+    "relationships": [
+      {
+        "source": "Seat Selection",
+        "relation": "suggests",
+        "target": "Environmental Preference"
+      },
+      {
+        "source": "Waiting",
+        "relation": "associated_with",
+        "target": "Smartphone Usage"
+      },
+      {
+        "source": "Meal Completion",
+        "relation": "followed_by",
+        "target": "Remaining Seated"
+      }
+    ]
+  },
+
+  "hypothesis": {
+    "statement": "The customer prefers a quiet and predictable dining environment.",
+    "confidence": "Low",
+    "predictions": [
+      "Likely to choose similar seating.",
+      "Likely to use a smartphone while waiting.",
+      "Likely to minimize conversation."
+    ]
+  },
+
+  "verification": {
+    "status": "Pending",
+    "required_observations": 5,
+    "criteria": [
+      "Repeat seat selection.",
+      "Repeat waiting behavior.",
+      "Repeat post-meal behavior."
+    ]
+  },
+
+  "knowledge": {
+    "classification": [
+      "Human Behavior",
+      "Customer Observation",
+      "Restaurant"
+    ],
+    "tags": [
+      "customer",
+      "behavior",
+      "observation",
+      "structure",
+      "sample"
+    ]
+  },
+
+  "ai": {
+    "generated": false,
+    "reviewed_by": "Human",
+    "notes": "Sample dataset for framework demonstration."
+  }
+}
