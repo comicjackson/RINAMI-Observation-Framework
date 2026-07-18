@@ -1,3 +1,5 @@
+Access the Observation Starter Kit on BOOTH (https://rinami-lab.booth.pm/)
+
 # RINAMI Observation Framework
 
 > Observe. Structure. Hypothesize. Verify.
