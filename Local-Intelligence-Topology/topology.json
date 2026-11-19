@@ -1,0 +1,121 @@
+{
+  "schema_version": "0.1.0",
+  "name": "Local Intelligence Topology",
+  "status": "conceptual_proposal",
+  "tiers": [
+    {
+      "id": "edge_ai",
+      "name": "Edge AI",
+      "role": "local_capture_and_immediate_processing",
+      "capabilities": [
+        "capture",
+        "filter",
+        "normalize",
+        "local_inference",
+        "local_alert"
+      ]
+    },
+    {
+      "id": "local_intelligence_layer",
+      "name": "Local Intelligence Layer",
+      "role": "context_structuring_coordination_and_governance",
+      "engines": [
+        {
+          "id": "context_engine",
+          "responsibility": "maintain_versioned_local_context_and_sources"
+        },
+        {
+          "id": "observation_engine",
+          "responsibility": "separate_observation_transcription_interpretation_hypothesis_and_verification"
+        },
+        {
+          "id": "knowledge_engine",
+          "responsibility": "retrieve_approved_local_knowledge_with_provenance"
+        },
+        {
+          "id": "orchestration_engine",
+          "responsibility": "route_tasks_across_edge_local_cloud_and_human_review"
+        },
+        {
+          "id": "governance_engine",
+          "responsibility": "enforce_identity_permissions_minimization_retention_and_audit"
+        }
+      ]
+    },
+    {
+      "id": "cloud_ai",
+      "name": "Cloud AI",
+      "role": "large_scale_reasoning_and_external_knowledge",
+      "capabilities": [
+        "advanced_inference",
+        "broad_knowledge_access",
+        "cross_domain_analysis"
+      ]
+    }
+  ],
+  "flow": [
+    "edge_capture",
+    "local_filtering_and_structuring",
+    "observation_interpretation_separation",
+    "governance_policy_check",
+    "optional_minimized_cloud_request",
+    "cloud_analysis_returned_as_untrusted_output",
+    "local_validation_and_human_review_when_required",
+    "audited_outcome_and_re_observation"
+  ],
+  "authority_levels": [
+    {
+      "level": "L0",
+      "name": "Observe",
+      "allowed": [
+        "capture",
+        "record"
+      ]
+    },
+    {
+      "level": "L1",
+      "name": "Analyze",
+      "allowed": [
+        "classify",
+        "summarize",
+        "hypothesize"
+      ]
+    },
+    {
+      "level": "L2",
+      "name": "Recommend",
+      "allowed": [
+        "recommend",
+        "simulate"
+      ],
+      "condition": "human_review_for_consequential_use"
+    },
+    {
+      "level": "L3",
+      "name": "Execute",
+      "allowed": [
+        "external_action"
+      ],
+      "condition": "explicit_authorization_and_audit"
+    }
+  ],
+  "principles": [
+    "local_first_where_practical",
+    "data_minimization",
+    "provenance_and_traceability",
+    "separation_of_intelligence_and_action_authority",
+    "human_and_organizational_accountability",
+    "degraded_offline_operation"
+  ],
+  "place_dimensions": [
+    "physical_place",
+    "contextual_place",
+    "decision_place",
+    "responsibility_place"
+  ],
+  "limitations": [
+    "not_a_validated_production_system",
+    "not_a_security_certification",
+    "not_a_legal_accountability_framework"
+  ]
+}
